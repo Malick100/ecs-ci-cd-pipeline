@@ -1,9 +1,9 @@
-name: build  and push images
+name: Build and Push images
 
 on:
    push:
-          branches: 
-            - main
+     branches: 
+       - main
 
 permissions:
   id-token: write
@@ -13,9 +13,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
