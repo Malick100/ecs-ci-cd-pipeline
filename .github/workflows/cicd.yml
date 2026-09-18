@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-    
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -36,9 +36,9 @@ jobs:
       - name: Tag Docker Image
         run: |
           docker tag ${{ vars.ECR_REPOSITORY }}:latest \
-            ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
+          ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
 
       - name: Push Docker Image
         run: |
           docker push \
-            ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
+          ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
