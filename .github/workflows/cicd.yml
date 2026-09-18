@@ -21,7 +21,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6.2.4
 
         with: 
-          role-to-assume: arn:aws:iam::686255983643:role/github-action-role
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}  
           audience: sts.amazonaws
 
